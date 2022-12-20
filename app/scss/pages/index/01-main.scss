@@ -17,7 +17,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: linear-gradient(180deg, rgba(16, 12, 12, 0) 84.58%, #100c0c 100%);
 	}
 	&__cover {
 		position: absolute;
@@ -109,8 +108,9 @@
 			position: relative;
 			top: auto;
 			left: auto;
+			height: auto;
 			img {
-				height: 100%;
+				height: auto;
 			}
 			&::after {
 				content: '';
@@ -120,7 +120,6 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				background: linear-gradient(180deg, rgba(16, 12, 12, 0) 84.58%, #100c0c 100%);
 			}
 		}
 		&__content {
