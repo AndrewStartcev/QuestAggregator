@@ -1,4 +1,77 @@
+/*==========================================================================================================================================================================*/
+/* Menu Burger */
+if (document.querySelector(".header-top__burger")) {
+  let delay = 500;
+  let unlock = true;
+  let menuBody = document.querySelector(".header-bottom");
+  let iconMenu = document.querySelector(".header-top__burger");
+  let iconMenuClose = document.querySelector(".header-bottom__close");
+
+  iconMenu.addEventListener("click", function (e) {
+    bodyLock(unlock, false, delay);
+    menuOpen(menuBody, iconMenu);
+  });
+
+  iconMenuClose.addEventListener("click", function (e) {
+    bodyUnLock(unlock, false, delay);
+    menuClose(menuBody, iconMenu);
+  });
+};
+
+
+function menuOpen(menuBody, iconMenu) {
+  document.documentElement.classList.add("_menu-open");
+  menuBody.classList.add("_active");
+  iconMenu.classList.add("_active");
+}
+
+function menuClose(menuBody, iconMenu) {
+  document.documentElement.classList.remove("_menu-open");
+  menuBody.classList.remove("_active");
+  iconMenu.classList.remove("_active");
+}
+
+/*==========================================================================================================================================================================*/
+/* Скрытие, блокировка и разблокировка скролла */
+function bodyLock(unlock, lockPadding, delay = 500) {
+  const lockPaddingValue = window.innerWidth - document.querySelector(".page").offsetWidth + "px";
+  if (lockPadding.length > 0) {
+    for (let index = 0; index < lockPadding.length; index++) {
+      const elem = lockPadding[index];
+      elem.style.paddingRight = lockPaddingValue;
+    }
+  }
+  document.body.style.paddingRight = lockPaddingValue;
+  document.body.classList.add("_lock");
+  unlock = false;
+  setTimeout(function () {
+    unlock = true;
+  }, delay);
+}
+
+
+function bodyUnLock(unlock, lockPadding, delay = 500) {
+  setTimeout(function () {
+    if (lockPadding.length > 0) {
+      for (let index = 0; index < lockPadding.length; index++) {
+        const elem = lockPadding[index];
+        elem.style.paddingRight = "0px";
+      }
+    }
+    document.body.style.paddingRight = "0px";
+    document.body.classList.remove("_lock");
+  }, delay);
+  unlock = false;
+  setTimeout(function () {
+    unlock = true;
+  }, delay);
+}
+
+
 $(document).ready(() => {
+
+
+
   // ======== Всплывающее окно по data-popup ===============
   //? Пример Кнопки: <button data-popup="#mainForm">...</button>
   $('[data-popup]').on('click', function (e) {
