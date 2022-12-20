@@ -1,0 +1,32 @@
+.header-top {
+	background: #100c0c;
+	color: #eae1e1;
+	&__btn {
+		background: #282222;
+		color: #eae1e1;
+		&:hover {
+			background: lighten(#282222, 10);
+		}
+	}
+}
+.header-bottom {
+	background: #171313;
+	color: #eae1e1;
+	&__close {
+		&::after,
+		&::before {
+			background: #eae1e1;
+		}
+	}
+}
+.header-footer {
+	border-top: 1px solid #282222;
+}
+
+@include media-tablet {
+	.header-bottom {
+		&__search {
+			background: #1e1b1b;
+		}
+	}
+}

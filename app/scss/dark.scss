@@ -1,0 +1,11 @@
+@import 'utils/variables';
+@import 'mixins/media';
+
+body {
+	background: #100c0c;
+	color: #ffffff;
+}
+
+@import 'common/header-dark';
+
+@import 'pages/index/01-main-dark';

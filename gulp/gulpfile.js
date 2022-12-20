@@ -39,11 +39,30 @@ function styles() {
         .pipe(dest("../dist/assets/css"))
         .pipe(browserSync.stream());
 }
-function stylesVendor() {
-    return src("../app/assets/library/**/*.css")
+function stylesDark() {
+    return src("../app/scss/dark.scss")
         .pipe(scss({ outputStyle: "compressed" }))
-        .pipe(concat("vendor.min.css"))
-        .pipe(dest("../dist/assets/library"))
+        .pipe(concat("dark.min.css"))
+        .pipe(
+            autoprefixer({
+                overrideBrowserslist: ["last 10 version"],
+                grid: true,
+            })
+        )
+        .pipe(dest("../dist/assets/css"))
+        .pipe(browserSync.stream());
+}
+function stylesLight() {
+    return src("../app/scss/light.scss")
+        .pipe(scss({ outputStyle: "compressed" }))
+        .pipe(concat("light.min.css"))
+        .pipe(
+            autoprefixer({
+                overrideBrowserslist: ["last 10 version"],
+                grid: true,
+            })
+        )
+        .pipe(dest("../dist/assets/css"))
         .pipe(browserSync.stream());
 }
 function htmlRun() {
@@ -95,7 +114,8 @@ function watching() {
     watch(["../app/assets/fonts/**/*"], watchingFonts);
     watch([".../app/assets/php/**/*"], watchingPhp);
     watch(["../app/scss/**/*.scss"], styles);
-    watch(["../app/assets/library/**/*.css"], stylesVendor);
+    watch(["../app/scss/**/*.scss"], stylesDark);
+    watch(["../app/scss/**/*.scss"], stylesLight);
     watch(["../app/assets/img/**/*"], images);
     watch(["../app/**/*.html"], htmlRun);
     watch(["../app/**/*.pug"], pug2html);
@@ -107,7 +127,8 @@ function watching() {
 
 exports.browsersync = browsersync;
 exports.styles = styles;
-exports.stylesVendor = stylesVendor;
+exports.stylesDark = stylesDark;
+exports.stylesLight = stylesLight;
 exports.htmlRun = htmlRun;
 exports.scripts = scripts;
 exports.scriptsVendor = scriptsVendor;
@@ -118,7 +139,8 @@ exports.pug2html = pug2html
 
 exports.default = parallel(
     styles,
-    stylesVendor,
+    stylesDark,
+    stylesLight,
     scripts, scriptsVendor,
     images, watchingPhp,
     watchingFonts,
