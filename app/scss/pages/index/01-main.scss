@@ -1,3 +1,142 @@
-.main {
-
+.index-main {
+	padding: 0;
+	min-height: calc(100vh - 146px);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(180deg, rgba(16, 12, 12, 0) 84.58%, #100c0c 100%);
+	}
+	&__cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+	}
+	&__group {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	h1 {
+		font-family: 'Balsamiq Sans';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 72px;
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+		max-width: 770px;
+	}
+	&__scroll {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0.5;
+		z-index: 1;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+@include media-tablet {
+	.index-main {
+		min-height: calc(100vh - 77px);
+		h1 {
+			font-size: 50px;
+			max-width: 538px;
+		}
+		&__scroll {
+			bottom: 20px;
+		}
+	}
+}
+@include media-mobile-horizontal {
+	.index-main {
+		&__group {
+			gap: 10px;
+		}
+		h1 {
+			font-size: 50px;
+			max-width: 538px;
+		}
+		&__scroll {
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+@include media-mobile {
+	.index-main {
+		min-height: auto;
+		padding-bottom: 80px;
+		flex-direction: column;
+		&::after {
+			display: none;
+		}
+		&__cover {
+			position: relative;
+			top: auto;
+			left: auto;
+			img {
+				height: 100%;
+			}
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: linear-gradient(180deg, rgba(16, 12, 12, 0) 84.58%, #100c0c 100%);
+			}
+		}
+		&__content {
+			gap: 20px;
+		}
+		&__group {
+			gap: 10px;
+		}
+		h1 {
+			font-size: 36px;
+		}
+		&__scroll {
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
 }

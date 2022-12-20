@@ -227,6 +227,7 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 		transition: transform 0.5s ease;
+		z-index: 2;
 		&._active {
 			transform: translateX(0);
 		}
