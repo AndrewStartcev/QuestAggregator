@@ -1,6 +1,8 @@
 .index-main {
 	padding: 0;
-	min-height: calc(100vh - 146px);
+	min-height: 650px;
+	height: calc(100vh - 146px);
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -64,6 +66,7 @@
 		z-index: 1;
 		&:hover {
 			opacity: 1;
+			transform: translateX(-50%) translateY(-10px);
 		}
 	}
 }
@@ -105,6 +108,7 @@
 			display: none;
 		}
 		&__cover {
+			flex: 0 0 auto;
 			position: relative;
 			top: auto;
 			left: auto;

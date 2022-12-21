@@ -113,3 +113,134 @@
 		margin-top: 40px;
 	}
 }
+
+/*=================================================================================   ELEMENTS   ===========================================================================*/
+/* Select */
+.select {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	min-width: 184px;
+	&::before {
+		content: '';
+		position: absolute;
+		right: 14px;
+		top: 50%;
+		width: 14px;
+		height: 14px;
+		pointer-events: none;
+		transform: translateY(-50%);
+		background: url('../img/icons/select-arrow.svg') center center / contain no-repeat;
+		transition: transform 0.2s ease-in-out;
+		z-index: 1;
+	}
+	&._active {
+		z-index: 15;
+		.select__options {
+			display: block;
+		}
+		&::before {
+			transform: translateY(-50%) rotateX(-180deg);
+		}
+	}
+	&__body {
+		position: relative;
+	}
+	&__title {
+		width: 100%;
+		border: 1px solid #282222;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	&__value {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 10px 14px;
+		font-size: 14px;
+		line-height: 17px;
+		color: #eae1e1;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__text {
+		flex: 1 1 auto;
+	}
+	&__input {
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+	}
+	&__options {
+		position: absolute;
+		top: 55px;
+		left: 0;
+		width: 100%;
+		background: #282222;
+		box-shadow: 0px 2px 14px rgba(38, 28, 28, 0.36);
+		border-radius: 4px;
+		display: none;
+		overflow: auto;
+		max-height: 180px;
+		z-index: 9999;
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&:-webkit-scrollbar-track {
+			background-color: #282222;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			box-shadow: inset 0 0 6px #e4a90f;
+		}
+	}
+	&__scroll {
+		max-height: 200px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	&__option {
+		position: relative;
+		display: block;
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding: 10px 14px;
+		font-size: 14px;
+		line-height: 17px;
+		color: #eae1e1;
+		border-bottom: 1px solid #342d2d;
+
+		&:last-child {
+			border: none;
+		}
+		&._active {
+			&::after {
+				content: '';
+				position: absolute;
+				left: auto;
+				right: 11px;
+				top: 50%;
+				width: 14px;
+				height: 14px;
+				pointer-events: none;
+				transform: translateY(-50%);
+				background: url('../img/icons/select-check.svg') center center / contain no-repeat;
+				transition: transform 0.2s ease-in-out;
+			}
+		}
+		&:hover {
+			background-color: rgba(#fff, 0.2);
+		}
+	}
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	._select-tag {
+		cursor: pointer;
+	}
+}

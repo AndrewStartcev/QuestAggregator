@@ -1,0 +1,276 @@
+.catalog-card-raiting {
+	position: absolute;
+	z-index: 1;
+	bottom: 12px;
+	left: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 8px;
+	&__item {
+		height: 24px;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1.2;
+		background: #1b1b22;
+		border-radius: 4px;
+		padding: 4px 8px;
+		display: inline-flex;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+		gap: 5px;
+		transition: all 0.5s ease;
+		&::before {
+			content: '';
+			display: inline-flex;
+			flex: 0 0 16px;
+			width: 16px;
+			height: 16px;
+		}
+		&._raiting {
+			&::before {
+				background: url('../img/icons/cup.svg') center center / contain no-repeat;
+			}
+		}
+		&._feedback {
+			&::before {
+				background: url('../img/icons/Star.svg') center center / contain no-repeat;
+			}
+		}
+		span {
+			white-space: nowrap;
+			display: inline-block;
+			overflow: hidden;
+			max-width: 0px;
+			transition: all 0.5s ease;
+			opacity: 0;
+		}
+	}
+}
+.catalog-card {
+	flex: 0 0 370px;
+	&__cover {
+		cursor: pointer;
+		border-radius: 16px;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 80.999%;
+
+		&:hover {
+			.catalog-card {
+				&__image {
+					img {
+						transform: scale(1.04);
+					}
+				}
+				&__info {
+					opacity: 0;
+				}
+			}
+			.catalog-card-raiting {
+				&__item {
+					max-width: 100%;
+					span {
+						max-width: 100%;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: radial-gradient(60.33% 60.33% at 50% 50%, rgba(16, 12, 12, 0) 0%, rgba(16, 12, 12, 0.6) 100%);
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 16px;
+		transition: all 0.5s ease;
+		object-fit: cover;
+	}
+	&__wishlist {
+		position: absolute;
+		z-index: 1;
+		top: 12px;
+		right: 12px;
+		width: 16px;
+		height: 16px;
+		path {
+			fill: #eae1e1;
+		}
+		&:hover {
+			path {
+				fill: #e4a90f;
+			}
+		}
+		&._active {
+			path {
+				fill: #c6251a;
+			}
+		}
+	}
+	&__info {
+		position: absolute;
+		z-index: 1;
+		bottom: 12px;
+		right: 12px;
+		width: 16px;
+		height: 16px;
+		transition: all 0.5s ease;
+		path {
+			fill: #e4a90f;
+		}
+	}
+
+	&__content {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		h3 {
+			font-size: 28px;
+			line-height: 100%;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+	}
+	&__category {
+		font-size: 16px;
+		opacity: 0.5;
+		margin-bottom: 16px;
+	}
+	&__excerpt {
+		margin: 0;
+		margin-bottom: 20px;
+		font-size: 15px;
+		line-height: 140%;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		line-height: 1.3em;
+		opacity: 0.3;
+	}
+	&__price {
+		font-family: 'Balsamiq Sans';
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 100%;
+		text-align: right;
+		letter-spacing: 0.02em;
+	}
+	&__link {
+		padding: 16px 40px;
+		font-size: 14px;
+	}
+}
+.catalog-card-detalis {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 15px 0 25px;
+	border-top: 1px solid #282222;
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 5px;
+		font-size: 15px;
+		&::before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			flex: 0 0 20px;
+		}
+		&._users {
+			&::before {
+				background: url('../img/icons/users.svg') center center / contain no-repeat;
+			}
+		}
+		&._time {
+			&::before {
+				background: url('../img/icons/time.svg') center center / contain no-repeat;
+			}
+		}
+		&._age {
+			&::before {
+				background: url('../img/icons/age.svg') center center / contain no-repeat;
+			}
+		}
+	}
+}
+.catalog-card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+@include media-tablet-horizontal {
+	.catalog-card {
+		flex: 0 0 300px;
+		&__cover {
+			padding-bottom: 65.999%;
+		}
+		&__content {
+			padding-top: 12px;
+		}
+	}
+}
+
+@include media-tablet {
+	.catalog-card {
+		flex: 0 0 calc(50% - 10px);
+		&__cover {
+			padding-bottom: 75.999%;
+		}
+		&__content {
+			padding-top: 20px;
+			h3 {
+				font-size: 22px;
+			}
+		}
+		&__category {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		&__excerpt {
+			font-size: 14px;
+		}
+		&__price {
+			font-size: 18px;
+		}
+		&__link {
+			padding: 12px 30px;
+			font-size: 12px;
+		}
+	}
+}
+@include media-mobile-horizontal {
+	.catalog-card {
+		flex: 0 0 100%;
+	}
+}
