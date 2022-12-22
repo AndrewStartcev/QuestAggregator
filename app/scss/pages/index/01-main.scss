@@ -1,5 +1,6 @@
 .index-main {
 	padding: 0;
+	padding-top: 146px;
 	min-height: 650px;
 	height: calc(100vh - 146px);
 
@@ -61,9 +62,12 @@
 		position: absolute;
 		bottom: 10px;
 		left: 50%;
+		width: 44px;
+		height: 44px;
 		transform: translateX(-50%);
 		opacity: 0.5;
 		z-index: 1;
+		background: url('../img/icons/arrow_down.svg') center center / contain no-repeat;
 		&:hover {
 			opacity: 1;
 			transform: translateX(-50%) translateY(-10px);
@@ -72,6 +76,7 @@
 }
 @include media-tablet {
 	.index-main {
+		padding-top: 80px;
 		min-height: calc(100vh - 77px);
 		h1 {
 			font-size: 50px;
@@ -84,6 +89,7 @@
 }
 @include media-mobile-horizontal {
 	.index-main {
+		padding-top: 60px;
 		&__group {
 			gap: 10px;
 		}
@@ -101,6 +107,7 @@
 }
 @include media-mobile {
 	.index-main {
+		height: auto;
 		min-height: auto;
 		padding-bottom: 80px;
 		flex-direction: column;

@@ -1,0 +1,61 @@
+.recommendation {
+	color: #eae1e1;
+}
+.recommendation-header {
+	flex-wrap: wrap;
+}
+.recommendation-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 34px;
+}
+
+.recommendation-body {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: 60px 30px;
+	.catalog-card {
+		flex: 0 0 calc(50% - 15px);
+	}
+}
+.recommendation-footer {
+	padding-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+}
+
+@include media-tablet-horizontal {
+	.recommendation-body {
+		gap: 40px 20px;
+	}
+}
+@include media-tablet {
+}
+@include media-mobile-horizontal {
+	.recommendation-body {
+		.catalog-card {
+			flex: 0 0 100%;
+		}
+	}
+	.recommendation-footer {
+		padding-top: 60px;
+	}
+}
+@include media-mobile {
+	.recommendation-footer {
+		padding-top: 50px;
+	}
+}

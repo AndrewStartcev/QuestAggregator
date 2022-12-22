@@ -104,7 +104,43 @@ document.addEventListener('click', (e) => {
   if (!withinBoundaries) {
     _slideDown(filter_form, 100, 'none');
   }
-})
+});
+
+/*   =================== Плавная прокрутка к блоку  =================== */
+const menuLinks = document.querySelectorAll("[data-goto]");
+if (menuLinks) {
+  menuLinks.forEach(elem => {
+    elem.addEventListener("click", gotoBlock);
+  });
+}
+
+
+function gotoBlock(e) {
+  const targetBlock = e.target.getAttribute("data-goto");
+  const targetBlockElement = document.querySelector(targetBlock);
+  removeActiveClasses(menuLinks, "_active");
+  e.target.classList.add("_active");
+  if (targetBlockElement) {
+    // // Закрытие открытого меню:
+    // document.documentElement.classList.contains("_menu-open") ? menuClose() : null;
+
+    // Прокрутка:
+    window.scrollTo({
+      top: targetBlockElement.getBoundingClientRect().top + window.scrollY,
+      behavior: "smooth",
+    });
+    e.preventDefault();
+  } else {
+    console.log(`[gotoBlock]: Такого блока нет на странице: ${targetBlock}`);
+  }
+};
+
+
+function removeActiveClasses(array, className) {
+  for (let i = 0; i < array.length; i++) {
+    array[i].classList.remove(className);
+  }
+}
 
 /*==========================================================================================================================================================================*/
 /* Select */
@@ -511,6 +547,7 @@ da.init();
 /* Табы */
 $(document).ready(() => {
   const catalog_tab_item = $('.catalog-tab-nav__item')
+  const index_main_btn = $('.index-main__btn')
   let catalog_title = $('.catalog-tab-nav__item._active').attr('data-title')
   const catalog_tab = $('.catalog-tab')
 
@@ -519,6 +556,15 @@ $(document).ready(() => {
     catalog_tab.removeClass('_active')
     $('#' + $(this).attr('data-tabs-button')).addClass('_active')
     $(this).addClass('_active')
+    catalog_title = $(this).attr('data-title')
+    $('.catalog-title').text(catalog_title)
+  });
+
+  index_main_btn.click(function () {
+    catalog_tab_item.removeClass('_active')
+    catalog_tab.removeClass('_active')
+    $('#' + $(this).attr('data-tabs-button')).addClass('_active')
+    $('.catalog-tab-nav__item[data-tabs-button="' + $(this).attr('data-tabs-button') + '"]').addClass('_active')
     catalog_title = $(this).attr('data-title')
     $('.catalog-title').text(catalog_title)
   })
