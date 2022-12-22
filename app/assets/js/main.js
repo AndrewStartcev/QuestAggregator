@@ -31,6 +31,21 @@ function menuClose(menuBody, iconMenu) {
   iconMenu.classList.remove("_active");
 }
 
+/*  =================== Sticky Header ======================= */
+const header = document.querySelector(".header");
+let scrollPrev = 0;
+
+window.addEventListener('scroll', function (e) {
+  let scrolled = window.pageYOffset;
+
+  if (scrolled > 100 && scrolled > scrollPrev) {
+    header.classList.add('_sticky');
+  } else {
+    header.classList.remove('_sticky');
+  }
+  scrollPrev = scrolled;
+})
+
 /*==========================================================================================================================================================================*/
 /* Скрытие, блокировка и разблокировка скролла */
 function bodyLock(unlock, lockPadding, delay = 500) {
@@ -543,17 +558,17 @@ $(document).ready(() => {
     }
   });
 
-  // ======== Добавление класс по скроллу ===============
-  scrollHeader()
-  $(window).scroll(scrollHeader);
-  function scrollHeader() {
-    var height = $(window).scrollTop();
-    if (height > 50) {
-      $('header').addClass('header-bg');
-    } else {
-      $('header').removeClass('header-bg');
-    }
-  }
+  // // ======== Добавление класс по скроллу ===============
+  // scrollHeader()
+  // $(window).scroll(scrollHeader);
+  // function scrollHeader() {
+  //   var height = $(window).scrollTop();
+  //   if (height > 50) {
+  //     $('header').addClass('header-bg');
+  //   } else {
+  //     $('header').removeClass('header-bg');
+  //   }
+  // }
 
   // ======== Плавный скролл по якорям ===============
   $('a[href^="#"]').on('click', function () {
