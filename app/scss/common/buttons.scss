@@ -40,9 +40,41 @@
 		transform: scale(0.95);
 	}
 }
+
+.up-btn {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 54px;
+	height: 54px;
+	background: #171313;
+	border: 1px solid #282222;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5 ease;
+	z-index: 99;
+	&:hover {
+		border: 1px solid #c6251b;
+	}
+	&::after {
+		content: '';
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url('../img/icons/arrow_top.svg') center center / contain no-repeat;
+	}
+}
+
 @include media-mobile {
 	.btn {
 		font-size: 14px;
 		padding: 16px 40px;
+	}
+	.up-btn {
+		bottom: 20px;
+		right: 20px;
 	}
 }

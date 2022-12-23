@@ -106,6 +106,38 @@ document.addEventListener('click', (e) => {
   }
 });
 
+/*  =================== SHOW\HIDE search ======================= */
+const search_btn = document.querySelector('.header-bottom__search');
+const search_form = document.querySelector('.header-search');
+addEventListener("resize", (event) => {
+  if (window.innerWidth < 1023) {
+    search_form.style.display = 'block'
+  } else {
+    search_form.style.display = 'none'
+  }
+});
+
+search_btn.addEventListener("click", searchChange);
+document.addEventListener('keydown', function (e) {
+  if (e.which == 27 || window.innerWidth > 1023) {
+    _slideDown(search_form, 100, 'none');
+  }
+});
+
+function searchChange() {
+  if (window.innerWidth > 1023) {
+    _slideToggle(search_form, 100, 'flex');
+  }
+}
+
+document.addEventListener('click', (e) => {
+  const withinBoundaries = e.composedPath().includes(header);
+
+  if (!withinBoundaries && window.innerWidth > 1023) {
+    _slideDown(search_form, 100, 'none');
+  }
+});
+
 /*   =================== Плавная прокрутка к блоку  =================== */
 const menuLinks = document.querySelectorAll("[data-goto]");
 if (menuLinks) {
@@ -702,3 +734,35 @@ document.addEventListener("DOMContentLoaded", function () {
     phoneInput.addEventListener('paste', onPhonePaste, false);
   }
 });
+
+
+// Slider. Articles:
+if (document.querySelector(".feedbacks-slider")) {
+  new Swiper(".feedbacks-slider", {
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    breakpoints: {
+      619: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    scrollbar: {
+      el: '.feedbacks-scrollbar',
+      draggable: true,
+    },
+  });
+}
