@@ -30,3 +30,13 @@
 		}
 	}
 }
+
+.footer {
+	&__btn {
+		background: #282222;
+		color: #eae1e1;
+		&:hover {
+			background: lighten(#282222, 10);
+		}
+	}
+}
