@@ -626,6 +626,18 @@ $(document).ready(() => {
     catalog_title = $(this).attr('data-title')
     $('.catalog-title').text(catalog_title)
   })
+
+
+  const novelty_tab_item = $('.novelty-tab-nav__item')
+  const novelty_tab = $('.novelty-tab')
+
+  novelty_tab_item.click(function () {
+    novelty_tab_item.removeClass('_active')
+    novelty_tab.removeClass('_active')
+    $('#' + $(this).attr('data-tabs-button')).addClass('_active')
+    $(this).addClass('_active')
+  });
+
 })
 
 $(document).ready(() => {
@@ -787,7 +799,67 @@ if (document.querySelector(".feedbacks-slider")) {
       pageUpDown: true,
     },
     scrollbar: {
-      el: '.feedbacks-scrollbar',
+      el: '._fedbacks-scrollbar',
+      draggable: true,
+    },
+  });
+}
+// Slider. Новинки: Квесты
+if (document.querySelector("#novelty_quest")) {
+  new Swiper("#novelty_quest", {
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    breakpoints: {
+      619: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    scrollbar: {
+      el: '._quest-scrollbar',
+      draggable: true,
+    },
+  });
+}
+// Slider. Новинки: Квесты
+if (document.querySelector("#novelty_arena")) {
+  new Swiper("#novelty_arena", {
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    breakpoints: {
+      619: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    scrollbar: {
+      el: '._arena-scrollbar',
       draggable: true,
     },
   });

@@ -1,0 +1,32 @@
+section.novelty
+  .container
+    .novelty-header
+      h2.title.novelty-title Новинки
+      nav.novelty-tab-nav
+        button.novelty-tab-nav__item._active(data-tabs-button="novelty_quest") Квесты
+        button.novelty-tab-nav__item(data-tabs-button="novelty_arena") VR арена
+    .novelty-tabs-parent
+      .novelty-tab._active#novelty_quest
+        .swiper-wrapper
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+        .slider-scrollbar._quest-scrollbar
+      .novelty-tab#novelty_arena
+        .swiper-wrapper
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+          .swiper-slide
+            include 03-catalog-card
+        .slider-scrollbar._arena-scrollbar
