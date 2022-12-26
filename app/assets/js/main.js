@@ -83,32 +83,53 @@ function bodyUnLock(unlock, lockPadding, delay = 500) {
 }
 
 /*  =================== SHOW\HIDE Catalog-filter ======================= */
-const filter_btn = document.querySelector('.catalog-filters__btn');
-const filter = document.querySelector('.catalog-filters');
-const filter_form = document.querySelector('.catalog-filters__form');
+const filter_btn = document.querySelectorAll('.catalog-filters__btn');
 
-filter_btn.addEventListener("click", filterChange);
-document.addEventListener('keydown', function (e) {
-  if (e.which == 27) {
-    _slideDown(filter_form, 100, 'none');
-  }
-});
-
-function filterChange() {
-  _slideToggle(filter_form, 100, 'flex');
+if (filter_btn.length > 0) {
+  filters_init();
+}
+function filters_init() {
+  filter_btn.forEach(elem => {
+    elem.addEventListener("click", function () {
+      filter_init(elem)
+    });
+  });
+  document.addEventListener('click', function (e) {
+    filters_close(e);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.which == 27) {
+      filters_close(e);
+    }
+  });
 }
 
-document.addEventListener('click', (e) => {
-  const withinBoundaries = e.composedPath().includes(filter);
-
-  if (!withinBoundaries) {
-    _slideDown(filter_form, 100, 'none');
+function filters_close(e) {
+  e.target.blur()
+  if (!e.target.closest('.catalog-filters')) {
+    for (let index = 0; index < filter_btn.length; index++) {
+      const filter = filter_btn[index].parentElement;
+      const filter_form = filter.querySelector('.catalog-filters__form');
+      filter_form.classList.remove('_filter-show');
+      _slideUp(filter_form, 100,);
+    }
   }
-});
+}
+
+function filter_init(e) {
+  const filter_parent = e.parentElement;
+  filter_parent.classList.toggle('_filter-show');
+  let filter_form = filter_parent.querySelector('.catalog-filters__form');
+  if (filter_form) {
+    _slideToggle(filter_form, 100, 'flex');
+  }
+}
 
 /*  =================== SHOW\HIDE search ======================= */
 const search_btn = document.querySelector('.header-bottom__search');
 const search_form = document.querySelector('.header-search');
+
+
 addEventListener("resize", (event) => {
   if (window.innerWidth < 1023) {
     search_form.style.display = 'block'
@@ -171,6 +192,11 @@ function gotoBlock(e) {
 function removeActiveClasses(array, className) {
   for (let i = 0; i < array.length; i++) {
     array[i].classList.remove(className);
+  }
+}
+function removeActiveClassesParents(array, className) {
+  for (let i = 0; i < array.length; i++) {
+    array[i].parentElement.classList.remove(className);
   }
 }
 

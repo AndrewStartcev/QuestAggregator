@@ -555,6 +555,71 @@
                 </div>
               </div>
               <div class="catalog-tab" id="arena">
+                <div class="catalog-navbar">
+                  <div class="catalog-category">
+                    <ul class="catalog-category__list">
+                      <li class="catalog-category__item current-category"><a href="#">Для детей</a></li>
+                      <li class="catalog-category__item"><a href="#">Для взрослых</a></li>
+                      <li class="catalog-category__item"><a href="#">Логические</a></li>
+                      <li class="catalog-category__item"><a href="#">Страшные</a></li>
+                      <li class="catalog-category__item"><a href="#">Детский ДР</a></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-sorting" data-da=".catalog-filters__form, 1023, first, ">
+                    <label for="sorting">Сортировка</label>
+                    <select id="sorting" name="sorting">
+                      <option value="По популярности" selected="selected">По популярности</option>
+                      <option value="Новинки">Новинки</option>
+                      <option value="Сначала дешёвые">Сначала дешёвые</option>
+                      <option value="Сначала дорогие">Сначала дорогие</option>
+                    </select>
+                  </div>
+                  <div class="catalog-filters">
+                    <button class="catalog-filters__btn"></button>
+                    <form class="catalog-filters__form">
+                      <div class="catalog-filters__item">
+                        <label for="genre">Жанр</label>
+                        <select id="genre" name="genre">
+                          <option value="Все жанры" selected="selected">Все жанры</option>
+                          <option value="Для детей">Для детей</option>
+                          <option value="Для взрослых">Для взрослых</option>
+                          <option value="Логические">Логические</option>
+                          <option value="Детский ДР">Детский ДР</option>
+                        </select>
+                      </div>
+                      <div class="catalog-filters__item">
+                        <label for="players">Количество игроков</label>
+                        <select id="players" name="players">
+                          <option value="2" selected="selected">2</option>
+                          <option value="4">4</option>
+                          <option value="8">8</option>
+                          <option value="12">12</option>
+                          <option value="16">16</option>
+                          <option value="20+">20+</option>
+                        </select>
+                      </div>
+                      <div class="catalog-filters__item">
+                        <label for="age">Возраст, лет</label>
+                        <select id="age" name="age">
+                          <option value="от 6 до 12" selected="selected">от 6 до 12</option>
+                          <option value="от 12 до 16">от 12 до 16</option>
+                          <option value="от 18">от 18</option>
+                        </select>
+                      </div>
+                      <div class="catalog-filters__item">
+                        <label for="age">Цена, руб</label>
+                        <div class="catalog-filters__row">
+                          <input type="number" id="age" placeholder="1000" min="1000" max="5000"/><span class="line">-</span>
+                          <input type="number" placeholder="50 000" min="1000" max="50000"/>
+                        </div>
+                      </div>
+                      <div class="catalog-filters__footer">
+                        <button class="catalog-filters__clear" type="reset">Очистить фильтр</button>
+                        <button class="btn catalog-filters__submit" type="submit">Найти</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
                 <div class="catalog-body">
                   <div class="catalog-card">
                     <div class="catalog-card__cover"><a class="catalog-card__image" href="#"><img src="assets/img/uploads/сard-bg.jpg" alt=""/></a><a class="catalog-card__wishlist" href="#"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
