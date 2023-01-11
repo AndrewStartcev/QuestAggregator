@@ -1,9 +1,7 @@
 .index-main {
 	padding: 0;
-	padding-top: 146px;
 	min-height: 650px;
 	height: calc(100vh - 146px);
-
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -76,7 +74,6 @@
 }
 @include media-tablet {
 	.index-main {
-		padding-top: 80px;
 		min-height: calc(100vh - 77px);
 		h1 {
 			font-size: 50px;
@@ -89,7 +86,6 @@
 }
 @include media-mobile-horizontal {
 	.index-main {
-		padding-top: 60px;
 		&__group {
 			gap: 10px;
 		}
@@ -109,7 +105,6 @@
 	.index-main {
 		height: auto;
 		min-height: auto;
-		padding-bottom: 80px;
 		flex-direction: column;
 		&::after {
 			display: none;

@@ -116,7 +116,14 @@ h6 {
 	overflow: hidden;
 }
 .content {
+	padding-top: 146px;
 	flex: 1 1 auto;
+	@include media-tablet {
+		padding-top: 80px;
+	}
+	@include media-mobile-horizontal {
+		padding-top: 60px;
+	}
 }
 .content,
 .header,
