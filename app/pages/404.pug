@@ -1,4 +1,12 @@
 extends common/layout-empty
 
 block content
-  main.content
+  section.empty-page(style="background: url('assets/img/uploads/404.png') center center / cover no-repeat;")
+    .container
+      .empty-page__logo
+        img(src="assets/img/logo.svg", alt="")
+        span Все квесты </br> города
+      .empty-page__content
+        h1 Похоже, тут ничего нет :(
+        p Упс… страница, которую вы ищите, не найдена. Возможно, она была удалена или просто устарела…
+        a.btn(href="index.html") Вернуться на главную
