@@ -864,3 +864,24 @@ if (document.querySelector("#novelty_arena")) {
     },
   });
 }
+// Slider. Описание квеста:
+if (document.querySelector("#slider-gallary")) {
+  new Swiper("#slider-gallary", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    scrollbar: {
+      el: '.slider-scrollbar',
+      draggable: true,
+    },
+    navigation: {
+      nextEl: '.product-gallary__btn--next',
+      prevEl: '.product-gallary__btn--prev',
+    },
+  });
+}

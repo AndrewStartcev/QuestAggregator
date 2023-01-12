@@ -1,0 +1,27 @@
+.product-description {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #282222;
+	p,
+	ul {
+		opacity: 0.5;
+	}
+}
+
+@include media-mobile-horizontal {
+	.product-description {
+		font-size: 16px;
+		line-height: 19px;
+		padding-bottom: 40px;
+	}
+}
+@include media-mobile {
+	.product-description {
+		font-size: 14px;
+		line-height: 16px;
+	}
+}

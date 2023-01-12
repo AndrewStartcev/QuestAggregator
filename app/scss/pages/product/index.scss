@@ -1,0 +1,36 @@
+.product-page {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	gap: 50px 100px;
+	&__content {
+		flex: 0 0 auto;
+		max-width: 735px;
+	}
+	&__contacts {
+		flex: 0 0 335px;
+	}
+}
+
+@include media-tablet-horizontal {
+	.product-page {
+		gap: 50px;
+		&__content {
+			flex: 0 0 auto;
+			max-width: 556px;
+			width: 100%;
+		}
+	}
+}
+
+@include media-tablet {
+	.product-page {
+		flex-direction: column;
+		&__content {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
