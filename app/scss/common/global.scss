@@ -144,3 +144,37 @@ h6 {
 		padding: 0px 10px;
 	}
 }
+[class*='_icon-'] {
+	&::before {
+		content: '';
+		display: inline-block;
+		flex: 0 0 auto;
+		width: 20px;
+		height: 20px;
+	}
+}
+._icon-genre {
+	&::before {
+		background: url('../img/icons/icon-genre.svg') center center / contain no-repeat;
+	}
+}
+._icon-users {
+	&::before {
+		background: url('../img/icons/icon-users.svg') center center / contain no-repeat;
+	}
+}
+._icon-time {
+	&::before {
+		background: url('../img/icons/icon-time.svg') center center / contain no-repeat;
+	}
+}
+._icon-user {
+	&::before {
+		background: url('../img/icons/icon-user.svg') center center / contain no-repeat;
+	}
+}
+._icon-cup {
+	&::before {
+		background: url('../img/icons/cup-icon.svg') center center / contain no-repeat;
+	}
+}

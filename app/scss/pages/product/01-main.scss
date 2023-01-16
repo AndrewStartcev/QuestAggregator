@@ -87,26 +87,6 @@
 				display: block;
 			}
 		}
-		._icon-genre {
-			&::before {
-				background: url('../img/icons/icon-genre.svg') center center / contain no-repeat;
-			}
-		}
-		._icon-users {
-			&::before {
-				background: url('../img/icons/icon-users.svg') center center / contain no-repeat;
-			}
-		}
-		._icon-time {
-			&::before {
-				background: url('../img/icons/icon-time.svg') center center / contain no-repeat;
-			}
-		}
-		._icon-user {
-			&::before {
-				background: url('../img/icons/icon-user.svg') center center / contain no-repeat;
-			}
-		}
 	}
 }
 .product-main-raiting {
