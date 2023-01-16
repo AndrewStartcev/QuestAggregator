@@ -460,14 +460,13 @@ function imposeMinMax(el) {
 }
 
 
-/*==========================================================================================================================================================================*/
-/* Динамический Адаптив */
+/*================ Динамический Адаптив =============================*/
+
 function dynamicAdapt(type) {
   this.type = type;
 }
 
 
-// Функция адаптива:
 dynamicAdapt.prototype.init = function () {
   const _this = this;
   this.оbjects = [];																				// Массив объектов.
@@ -508,8 +507,6 @@ dynamicAdapt.prototype.init = function () {
   }
 };
 
-
-// Функция перемещения:
 dynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
   if (matchMedia.matches) {
     for (let i = 0; i < оbjects.length; i++) {
@@ -527,8 +524,6 @@ dynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
   }
 };
 
-
-// Функция перемещения:
 dynamicAdapt.prototype.moveTo = function (place, element, destination) {
   element.classList.add(this.daClassname);
   if (place === 'last' || place >= destination.children.length) {
@@ -542,8 +537,6 @@ dynamicAdapt.prototype.moveTo = function (place, element, destination) {
   destination.children[place].insertAdjacentElement('beforebegin', element);
 }
 
-
-// Функция возврата:
 dynamicAdapt.prototype.moveBack = function (parent, element, index) {
   element.classList.remove(this.daClassname);
   if (parent.children[index] !== undefined) {
@@ -553,15 +546,11 @@ dynamicAdapt.prototype.moveBack = function (parent, element, index) {
   }
 }
 
-
-// Функция получения индекса внутри родителя:
 dynamicAdapt.prototype.indexInParent = function (parent, element) {
   const array = Array.prototype.slice.call(parent.children);
   return Array.prototype.indexOf.call(array, element);
 };
 
-
-// Функция сортировки массива по breakpoint и place по возрастанию для this.type = min по убыванию для this.type = max:
 dynamicAdapt.prototype.arraySort = function (arr) {
   if (this.type === "min") {
     Array.prototype.sort.call(arr, function (a, b) {
@@ -601,8 +590,8 @@ dynamicAdapt.prototype.arraySort = function (arr) {
 const da = new dynamicAdapt("max");
 da.init();
 
-/*==========================================================================================================================================================================*/
-/* Табы */
+/*================ ТАБЫ ====================================*/
+
 $(document).ready(() => {
   const catalog_tab_item = $('.catalog-tab-nav__item')
   const index_main_btn = $('.index-main__btn')
@@ -773,7 +762,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
+// ============ Слайдеры ===================
 // Slider. Articles:
 if (document.querySelector(".feedbacks-slider")) {
   new Swiper(".feedbacks-slider", {
@@ -921,7 +910,7 @@ if (document.querySelector("#similar_slider")) {
 }
 
 
-// ======================== Смена темы сайnf ================================
+// ======================== Смена темы на сайте ================================
 const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
 const darkStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
 const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
