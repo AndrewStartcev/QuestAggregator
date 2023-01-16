@@ -3,11 +3,17 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="color-scheme" content="light dark")
+    meta(name="theme-color" media="(prefers-color-scheme: light)" content="#c7cbcc")
+    meta(name="theme-color" media="(prefers-color-scheme: dark)"  content="#273a43")
     title Все квесты и VR арены в Иркутске!
 
     link(rel="stylesheet", href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
     link(rel="stylesheet", href="assets/css/style.min.css")
-    link(rel="stylesheet", href="assets/css/dark.min.css")
+
+    link(rel="stylesheet" href="assets/css/light.min.css" media="(prefers-color-scheme: light)")
+    link(rel="stylesheet" href="assets/css/dark.min.css" media="(prefers-color-scheme: dark)")
+
   body#top
     .page
       block header

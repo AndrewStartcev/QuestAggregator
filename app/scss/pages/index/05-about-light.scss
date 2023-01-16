@@ -1,0 +1,14 @@
+.about {
+	background: url('../img/uploads/bg-light.jpg') center center / cover no-repeat;
+	.btn-outline {
+		color: #c6251a;
+	}
+}
+.about-block {
+	.container {
+		&::after {
+			background: url('../img/uploads/key-light.png') top right / contain no-repeat;
+			transform: translate(230px, -60px);
+		}
+	}
+}

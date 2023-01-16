@@ -29,9 +29,16 @@ footer.footer#footer
         p.footer-bottom__copy © 2022 Агрегатор квестов и VR-Арен
         a.footer-bottom__policy(href="#") Политика конфиденциальности
       .footer-bottom__column
-        nav.footer-theme
-          button._active(data-theme="dark") Темная тема
-          button(data-theme="light") Светлая тема
+        nav.footer-theme.switcher
+          .switcher__item
+            input.switcher__radio.switcher__radio--auto#switcherAuto(type="radio" name="color-scheme" value="auto" aria-label="Авто" checked)
+            label(for="switcherAuto") Авто
+          .switcher__item
+            input.switcher__radio.switcher__radio--light#switcherLight(type="radio" name="color-scheme" value="light" aria-label="Светлая")
+            label(for="switcherLight") Светлая тема
+          .switcher__item
+            input.switcher__radio.switcher__radio--dark#switcherDark(type="radio" name="color-scheme" value="dark" aria-label="Тёмная")
+            label(for="switcherDark") Темная тема
         a.footer-author(href="#" target="_blank")
           span Разработка:
           <svg width="250" height="57" viewBox="0 0 250 57" fill="none" xmlns="http://www.w3.org/2000/svg">

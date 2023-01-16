@@ -1,0 +1,26 @@
+.index-main {
+	color: #eae1e1;
+	.btn-outline {
+		color: #eae1e1;
+		background: #171313;
+		border: 1px solid #c6251a;
+	}
+	&::after {
+		background: linear-gradient(180deg, rgba(16, 12, 12, 0) 84.58%, #100c0c 100%);
+	}
+	&__scroll {
+		path {
+			fill: #eae1e1;
+		}
+	}
+}
+
+@include media-mobile {
+	.index-main {
+		&__cover {
+			&::after {
+				background: linear-gradient(180deg, rgba(16, 12, 12, 0) 84.58%, #100c0c 100%);
+			}
+		}
+	}
+}

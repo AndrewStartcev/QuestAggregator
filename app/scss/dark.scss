@@ -5,10 +5,19 @@ body {
 	background: #100c0c;
 	color: #ffffff;
 }
-
+@import 'common/buttons-dark';
 @import 'common/header-dark';
 @import 'common/footer-dark';
 
 @import 'pages/index/01-main-dark';
 @import 'pages/index/02-catalog-dark';
 @import 'pages/index/04-feedbacks-dark.scss';
+@import 'pages/index/05-about-dark.scss';
+@import 'pages/index/06-novelty-dark.scss';
+
+@import 'pages/product/02-navbar-dark';
+@import 'pages/product/03-description-dark';
+@import 'pages/product/04-slider-dark';
+@import 'pages/product/05-prices-dark';
+@import 'pages/product/06-feedbacks-dark';
+@import 'pages/product/07-contacts-dark';

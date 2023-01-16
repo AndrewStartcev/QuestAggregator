@@ -1,38 +1,34 @@
 .catalog {
-	color: #eae1e1;
+	color: #100c0c;
 }
 .catalog-category {
 	&__item {
-		background: #282222;
+		color: #100c0c;
+		background: #e3e3e3;
 	}
 }
 .catalog-filters {
 	&__btn {
 		&:hover {
-			background: rgba(#282222, 0.4) url('../img/icons/Filter.svg') center center / 30px no-repeat;
+			background: rgba(#e3e3e3, 0.4) url('../img/icons/Filter.svg') center center / 30px no-repeat;
 		}
 	}
 	&__form {
-		background: #282222;
-		box-shadow: 0px 2px 14px rgba(38, 28, 28, 0.36);
+		background: #f8f8f8;
+		box-shadow: 0px 0px 15px rgba(113, 113, 113, 0.1);
 	}
 	&__item,
 	.catalog-sorting {
+		color: #100c0c;
 		.select__value,
 		input {
-			background: #1e1b1b;
+			background: #ebebeb;
 		}
 		.select._active {
 			outline: 1px solid #ffffff;
 		}
 		input {
-			color: #eae1e1;
-		}
-		.select__options {
-			background: #1e1b1b;
-		}
-		.select__option {
-			border-bottom-color: #100c0c;
+			color: #100c0c;
 		}
 	}
 	&__row {

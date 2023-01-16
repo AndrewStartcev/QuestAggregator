@@ -1,0 +1,10 @@
+.product-feedback {
+	border-bottom: 1px solid #282222;
+	&__photo {
+		background: #100c0c;
+		path,
+		ellipse {
+			fill: #3c383e;
+		}
+	}
+}

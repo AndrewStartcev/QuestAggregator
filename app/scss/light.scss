@@ -1,0 +1,27 @@
+@import 'utils/variables';
+@import 'mixins/media';
+
+body {
+	background: #f8f8f8;
+	color: #100c0c;
+}
+@import 'common/buttons-light';
+@import 'common/popup-light';
+
+@import 'common/header-light';
+@import 'common/footer-light';
+
+@import 'pages/index/01-main-light';
+@import 'pages/index/02-catalog-light';
+@import 'pages/index/02-catalog-card-light';
+@import 'pages/index/03-recommendation-light';
+@import 'pages/index/04-feedbacks-light.scss';
+@import 'pages/index/05-about-light.scss';
+@import 'pages/index/06-novelty-light.scss';
+
+@import 'pages/product/02-navbar-light';
+@import 'pages/product/03-description-light';
+@import 'pages/product/04-slider-light';
+@import 'pages/product/05-prices-light';
+@import 'pages/product/06-feedbacks-light';
+@import 'pages/product/07-contacts-light';

@@ -1,0 +1,51 @@
+.header-top {
+	background: #f8f8f8;
+	color: #100c0c;
+	&__btn {
+		background: #f0f0f0;
+		color: #c6251a;
+		&:hover {
+			background: darken(#f0f0f0, 10);
+		}
+	}
+}
+.header-bottom {
+	background: #f0f0f0;
+	color: #100c0c;
+	&__close {
+		&::after,
+		&::before {
+			background: #757581;
+		}
+	}
+}
+.header-footer {
+	border-top: 1px solid #e3e3e3;
+}
+
+@include media-tablet {
+	.header-bottom {
+		background: #f8f8f8;
+		&__search input {
+			background: #f8f8f8;
+		}
+	}
+}
+.header-search {
+	background: #f8f8f8;
+}
+.header-search input,
+.header-search button {
+	background: #ebebeb;
+	color: #100c0c;
+}
+
+.footer {
+	&__btn {
+		background: #f0f0f0;
+		color: #c6251a;
+		&:hover {
+			background: darken(#f0f0f0, 10);
+		}
+	}
+}

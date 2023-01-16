@@ -1,0 +1,19 @@
+.btn {
+	background: linear-gradient(180deg, #ef544a 7.81%, #c6251a 42.19%, #c6251a 42.2%);
+	color: #eae1e1;
+	&::after {
+		background: #fff;
+	}
+	&-outline {
+		background: #171313;
+		border: 1px solid #c6251a;
+	}
+}
+.up-btn {
+	background: #171313;
+	border: 1px solid #282222;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	&:hover {
+		border: 1px solid #c6251b;
+	}
+}

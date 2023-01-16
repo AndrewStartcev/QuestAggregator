@@ -1,0 +1,26 @@
+.product-prices {
+	border-bottom: 1px solid #282222;
+	h2 {
+		margin: 0;
+	}
+	p,
+	ul {
+		color: #eae1e1;
+	}
+
+	&__item {
+		h3 {
+			color: #e4a90f;
+		}
+		p,
+		ul {
+			color: #eae1e1;
+		}
+	}
+	&__info {
+		color: #eae1e1;
+		span {
+			color: #c6251a;
+		}
+	}
+}

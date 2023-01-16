@@ -1,0 +1,11 @@
+.about {
+	background: url('../img/uploads/bg.png') center center / cover no-repeat;
+}
+.about-block {
+	.container {
+		&::after {
+			background: url('../img/uploads/key-dark.png') top right / contain no-repeat;
+			mix-blend-mode: color-dodge;
+		}
+	}
+}

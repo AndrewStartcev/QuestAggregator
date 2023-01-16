@@ -1,6 +1,5 @@
 .product-contacts {
-	padding: 45px;
-	background: #171313;
+	padding: 45px 40px;
 	border-radius: 16px;
 	position: sticky;
 	h2 {
@@ -43,7 +42,6 @@
 			font-weight: 700;
 			font-size: 12px;
 			line-height: 14px;
-			color: #e4a90f;
 			&:hover {
 				text-decoration: underline;
 			}
@@ -66,10 +64,6 @@
 		border-radius: 0px;
 		h2 {
 			font-size: 26px;
-		}
-		&__phone {
-			-webkit-text-fill-color: #eae1e1;
-			color: #eae1e1;
 		}
 		.btn {
 			width: auto;

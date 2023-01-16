@@ -1,14 +1,15 @@
 .slider-scrollbar {
-	background: #282222;
+	background: #e8e8e8;
 	.swiper-scrollbar-drag {
-		background: #3c3434;
+		background: #d2d1d1;
 	}
 }
 
 .feedbacks-item {
-	background: #171313;
+	background: #ffffff;
+	color: #100c0c;
 	&__header {
-		border-bottom: 1px solid #282222;
+		border-bottom: 1px solid #e3e3e3;
 	}
 	&__title {
 		h4 {
@@ -19,10 +20,10 @@
 		color: #e4a90f;
 	}
 	&__photo {
-		background: #100c0c;
+		background: #f0f0f0;
 		path,
 		ellipse {
-			fill: #3c383e;
+			fill: #757581;
 		}
 	}
 }

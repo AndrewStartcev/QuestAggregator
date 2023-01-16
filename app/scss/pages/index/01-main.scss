@@ -1,5 +1,7 @@
 .index-main {
+	background: #100c0c;
 	padding: 0;
+
 	min-height: 650px;
 	height: calc(100vh - 146px);
 	background-repeat: no-repeat;
@@ -103,6 +105,7 @@
 }
 @include media-mobile {
 	.index-main {
+		padding-bottom: 80px;
 		height: auto;
 		min-height: auto;
 		flex-direction: column;
