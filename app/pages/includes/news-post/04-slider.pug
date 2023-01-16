@@ -1,0 +1,19 @@
+section.novelty.similar
+  .container
+    .novelty-header
+      h2.title.novelty-title._no-icon Похожие новости
+      nav.similar-nav
+        button.similar__btn.similar__btn--prev
+        button.similar__btn.similar__btn--next
+    .novelty-tabs-parent
+      .similar__slider#similar_slider
+        .swiper-wrapper
+          .swiper-slide
+            include ../news/02-card
+          .swiper-slide
+            include ../news/02-card
+          .swiper-slide
+            include ../news/02-card
+          .swiper-slide
+            include ../news/02-card
+        .slider-scrollbar._similar-scrollbar

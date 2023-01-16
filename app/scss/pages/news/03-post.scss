@@ -1,0 +1,40 @@
+.news-post {
+	padding: 60px 0 70px;
+	&__wrapper {
+		max-width: 770px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		p,
+		ul,
+		ol,
+		li {
+			opacity: 0.7;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border-radius: 16px;
+			margin: 15px 0;
+		}
+	}
+	.btn {
+		margin-top: 55px;
+	}
+}
+
+@include media-mobile-horizontal {
+	.news-post {
+		padding: 30px 0 30px;
+		&__wrapper {
+			font-size: 15px;
+			img {
+				margin: 15px 0;
+			}
+		}
+		.btn {
+			margin-top: 35px;
+		}
+	}
+}

@@ -178,3 +178,14 @@ h6 {
 		background: url('../img/icons/cup-icon.svg') center center / contain no-repeat;
 	}
 }
+._icon-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	&::before {
+		width: 24px;
+		height: 24px;
+		background: url('../img/icons/arrow-left.svg') center center / contain no-repeat;
+	}
+}
