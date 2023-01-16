@@ -2,6 +2,7 @@
 	padding: 45px;
 	background: #171313;
 	border-radius: 16px;
+	position: sticky;
 	h2 {
 		margin: 0;
 		font-weight: 400;
@@ -61,7 +62,6 @@
 @include media-tablet {
 	.product-contacts {
 		padding: 0;
-		margin-bottom: 50px;
 		background: transparent;
 		border-radius: 0px;
 		h2 {

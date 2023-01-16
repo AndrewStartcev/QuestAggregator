@@ -885,3 +885,37 @@ if (document.querySelector("#slider-gallary")) {
     },
   });
 }
+// Slider. Похожии квесты:
+if (document.querySelector("#similar_slider")) {
+  new Swiper("#similar_slider", {
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    breakpoints: {
+      619: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    scrollbar: {
+      el: '._similar-scrollbar',
+      draggable: true,
+    },
+    navigation: {
+      nextEl: '.similar__btn--next',
+      prevEl: '.similar__btn--prev',
+    },
+  });
+}
