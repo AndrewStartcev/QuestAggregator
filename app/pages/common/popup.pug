@@ -1,10 +1,25 @@
-.popup#mainForm
+.popup#orderPopup
   .popup__content
     .popup__body
       button.popup__close
-      h2.popup__title
-      p.popup__text
-      .popup__form
+      h2.popup__title Заказать звонок
+      p.popup__text Оставьте свои контактные данные, мы перезвоним в течение 30 минут
+      .popup__form.form
+        form(action="#")
+          .form__content
+            .form__item._input
+              input(type="text" name="user-name" placeholder="Имя*" required)
+            .form__item._input
+              input(type="tel" name="user-tel" placeholder="+7 (999) 999-99-99*" required)
+            .form__item._textarea
+              textarea(name="user-detalis" placeholder="Возраст и количество игроков")
+            .form__footer
+              .form-checkbox
+                input#policy(type="checkbox" name="user-policy")
+                label(for="policy")
+                  span Даю согласие на обработку <a href="#">персональных данных</a>
+              button.btn.form__submit Отправить
+
 
 .popup#successForm
   .popup__content

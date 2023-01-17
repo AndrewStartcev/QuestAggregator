@@ -105,7 +105,7 @@ function filters_init() {
 }
 
 function filters_close(e) {
-  e.target.blur()
+
   if (!e.target.closest('.catalog-filters')) {
     for (let index = 0; index < filter_btn.length; index++) {
       const filter = filter_btn[index].parentElement;
@@ -113,6 +113,8 @@ function filters_close(e) {
       filter_form.classList.remove('_filter-show');
       _slideUp(filter_form, 100,);
     }
+  } else {
+    e.target.blur()
   }
 }
 
@@ -631,8 +633,6 @@ $(document).ready(() => {
 
 $(document).ready(() => {
 
-
-
   // ======== Всплывающее окно по data-popup ===============
   //? Пример Кнопки: <button data-popup="#mainForm">...</button>
   $('[data-popup]').on('click', function (e) {
@@ -661,32 +661,6 @@ $(document).ready(() => {
       $('.popup').removeClass('show');
       $('html').removeClass('lock');
     }
-  });
-
-  // // ======== Добавление класс по скроллу ===============
-  // scrollHeader()
-  // $(window).scroll(scrollHeader);
-  // function scrollHeader() {
-  //   var height = $(window).scrollTop();
-  //   if (height > 50) {
-  //     $('header').addClass('header-bg');
-  //   } else {
-  //     $('header').removeClass('header-bg');
-  //   }
-  // }
-
-  // ======== Плавный скролл по якорям ===============
-  $('a[href^="#"]').on('click', function () {
-    let href = $(this).attr('href');
-
-    $('html, body').animate({
-      scrollTop: $(href).offset().top
-    }, {
-      duration: 500,   // по умолчанию «400»
-      easing: "swing" // по умолчанию «swing»
-    });
-
-    return false;
   });
 });
 
