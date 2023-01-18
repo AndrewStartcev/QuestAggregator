@@ -1009,7 +1009,7 @@
                     <div class="feedbacks-item__content">
                       <div class="feedbacks-item__text">
                         <p>Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте</p>
-                      </div><a class="feedbacks-item__link" href="#">Читать полностью</a>
+                      </div><a class="feedbacks-item__link" href="#slide2" data-popup-id="#feedbacksPopup">Читать полностью</a>
                     </div>
                     <div class="feedbacks-item__author">
                       <div class="feedbacks-item__photo"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1038,7 +1038,7 @@
                     <div class="feedbacks-item__content">
                       <div class="feedbacks-item__text">
                         <p>Мы решили открыть для себя новые ощущения, посетив квест "Шепот". Первым хорошим впечатлением стала администратор ,который объяснил всё досконально, внимательно выслушав инструктаж, мы погрузились в атмосферу квеста игры. Шепот вызвал бурю эмоций и выброс адреналина, очень сильно благодарим организацию за то, что в нашем Иркутске есть такие квесты</p>
-                      </div><a class="feedbacks-item__link" href="">Читать полностью</a>
+                      </div><a class="feedbacks-item__link" href="#slide3" data-popup-id="#feedbacksPopup">Читать полностью</a>
                     </div>
                     <div class="feedbacks-item__author">
                       <div class="feedbacks-item__photo"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1067,7 +1067,7 @@
                     <div class="feedbacks-item__content">
                       <div class="feedbacks-item__text">
                         <p>Мы решили открыть для себя новые ощущения, посетив квест "Шепот". Первым хорошим впечатлением стала администратор ,который объяснил всё досконально, внимательно выслушав инструктаж, мы погрузились в атмосферу квеста игры. Шепот вызвал бурю эмоций и выброс адреналина, очень сильно благодарим организацию за то, что в нашем Иркутске есть такие квесты</p>
-                      </div><a class="feedbacks-item__link" href="">Читать полностью</a>
+                      </div><a class="feedbacks-item__link" href="#slide4" data-popup-id="#feedbacksPopup">Читать полностью</a>
                     </div>
                     <div class="feedbacks-item__author">
                       <div class="feedbacks-item__photo"><img src="assets/img/uploads/photo-1.jpg" alt=""/></div>
@@ -1554,13 +1554,209 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="addPostPopup">
+        <div class="popup__content">
+          <div class="popup__body">
+            <button class="popup__close"></button>
+            <h2 class="popup__title">Добавить квест</h2>
+            <p class="popup__text">Вы можете добавить свой квест на сайт абсолютно бесплатно</p>
+            <div class="popup__form form">
+              <form action="#">
+                <div class="form__content">
+                  <div class="form__item _input">
+                    <input type="text" name="user-name" placeholder="Имя*" required="required"/>
+                  </div>
+                  <div class="form__item _input">
+                    <input type="tel" name="user-tel" placeholder="+7 (999) 999-99-99*" required="required"/>
+                  </div>
+                  <div class="form__item _input">
+                    <input type="text" name="company-name" placeholder="Название компании"/>
+                  </div>
+                  <div class="form__item _input">
+                    <input type="text" name="company-link" placeholder="Ссылка на квест"/>
+                  </div>
+                  <div class="form__footer">
+                    <div class="form-checkbox">
+                      <input id="policy_1" type="checkbox" name="user-policy"/>
+                      <label for="policy_1"><span>Даю согласие на обработку <a href="#">персональных данных</a></span></label>
+                    </div>
+                    <button class="btn form__submit">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="bookingGamePopup">
+        <div class="popup__content">
+          <div class="popup__body">
+            <button class="popup__close"></button>
+            <h2 class="popup__title">Бронировать игру</h2>
+            <p class="popup__text">Оставьте свои контактные данные, мы перезвоним в течение 30 минут</p>
+            <div class="popup__form form">
+              <form action="#">
+                <div class="form__content">
+                  <div class="form__item _input _max">
+                    <input type="text" name="user-name" placeholder="Имя*" required="required"/>
+                  </div>
+                  <div class="form__item _input _max">
+                    <input type="tel" name="user-tel" placeholder="+7 (999) 999-99-99*" required="required"/>
+                  </div>
+                  <div class="form__item _input _max">
+                    <input type="datetime-local" name="user-date" placeholder="17.12.2022 15:30"/>
+                  </div>
+                  <div class="form__footer _center">
+                    <div class="form-checkbox">
+                      <input id="policy_2" type="checkbox" name="user-policy"/>
+                      <label for="policy_2"><span>Даю согласие на обработку <a href="#">персональных данных</a></span></label>
+                    </div>
+                    <button class="btn form__submit">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup show" id="feedbacksPopup">
+        <div class="popup__content">
+          <div class="popup__body">
+            <button class="popup__close"></button>
+            <div class="popup-slider" id="popup-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="slide1">
+                  <div class="feedbacks-item popup-slider__item">
+                    <div class="feedbacks-item__header">
+                      <div class="feedbacks-item__title">
+                        <p>Квест:</p>
+                        <h4>В Темноте</h4>
+                      </div>
+                      <div class="feedbacks-item__raiting"><span>Рейтинг</span>
+                        <p>9,9 из 10</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__content">
+                      <div class="feedbacks-item__text">
+                        <p>Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте</p>
+                        <p>Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__author">
+                      <div class="feedbacks-item__photo"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+<path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+</svg>
+                      </div>
+                      <div class="feedbacks-item__label">
+                        <h4>Вероника П. (гуру)</h4>
+                        <p>29 дней назад</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-hash="slide2">
+                  <div class="feedbacks-item popup-slider__item">
+                    <div class="feedbacks-item__header">
+                      <div class="feedbacks-item__title">
+                        <p>Квест:</p>
+                        <h4>В Темноте</h4>
+                      </div>
+                      <div class="feedbacks-item__raiting"><span>Рейтинг</span>
+                        <p>9,9 из 10</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__content">
+                      <div class="feedbacks-item__text">
+                        <p>Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__author">
+                      <div class="feedbacks-item__photo"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+<path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+</svg>
+                      </div>
+                      <div class="feedbacks-item__label">
+                        <h4>Вероника П. (гуру)</h4>
+                        <p>29 дней назад</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-hash="slide3">
+                  <div class="feedbacks-item popup-slider__item">
+                    <div class="feedbacks-item__header">
+                      <div class="feedbacks-item__title">
+                        <p>Квест:</p>
+                        <h4>В Темноте</h4>
+                      </div>
+                      <div class="feedbacks-item__raiting"><span>Рейтинг</span>
+                        <p>9,9 из 10</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__content">
+                      <div class="feedbacks-item__text">
+                        <p>Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__author">
+                      <div class="feedbacks-item__photo"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+<path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+</svg>
+                      </div>
+                      <div class="feedbacks-item__label">
+                        <h4>Вероника П. (гуру)</h4>
+                        <p>29 дней назад</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" data-hash="slide4">
+                  <div class="feedbacks-item popup-slider__item">
+                    <div class="feedbacks-item__header">
+                      <div class="feedbacks-item__title">
+                        <p>Квест:</p>
+                        <h4>В Темноте</h4>
+                      </div>
+                      <div class="feedbacks-item__raiting"><span>Рейтинг</span>
+                        <p>9,9 из 10</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__content">
+                      <div class="feedbacks-item__text">
+                        <p>Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте</p>
+                      </div>
+                    </div>
+                    <div class="feedbacks-item__author">
+                      <div class="feedbacks-item__photo"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+<path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+</svg>
+                      </div>
+                      <div class="feedbacks-item__label">
+                        <h4>Вероника П. (гуру)</h4>
+                        <p>29 дней назад</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-scrollbar _fedbacks-popup-scrollbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="popup" id="successForm">
         <div class="popup__content">
           <div class="popup__body">
             <button class="popup__close"></button>
             <h2 class="popup__title">Брагодарим за заявку!</h2>
             <p class="popup__text">В ближайшее время наш менеджер свяжется с вами для подтвеждения брони</p>
-            <button class="btn">Закрыть окно</button>
+            <div class="form__footer _center">
+              <button class="btn popup-close">Закрыть окно</button>
+            </div>
           </div>
         </div>
       </div>

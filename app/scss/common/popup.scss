@@ -120,6 +120,27 @@
 		margin-top: 40px;
 	}
 }
+.popup-slider {
+	overflow: hidden;
+	width: 100%;
+	.swiper-wrapper {
+		align-items: stretch;
+		.swiper-slide {
+			height: auto;
+		}
+	}
+	&__item.feedbacks-item {
+		height: 100%;
+		padding: 0;
+		background: transparent;
+		.feedbacks-item__text {
+			display: block;
+		}
+		.feedbacks-item__author {
+			margin-top: auto;
+		}
+	}
+}
 
 .form {
 	&__content {
@@ -133,6 +154,9 @@
 		flex: 1 1 auto;
 		&._input {
 			flex: 1 1 calc(50% - 8px);
+			&._max {
+				flex: 1 1 100%;
+			}
 		}
 		input,
 		textarea {
@@ -142,6 +166,12 @@
 			background: #1e1b1b;
 			color: #fff;
 			border-radius: 8px;
+			width: 100%;
+			box-shadow: none;
+			border: none;
+			&::-webkit-calendar-picker-indicator {
+				filter: invert(1);
+			}
 		}
 	}
 	&__footer {
@@ -150,6 +180,14 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 15px;
+		&._center {
+			margin-top: 40px;
+			justify-content: center;
+			flex-direction: column;
+			.btn {
+				margin-left: 0;
+			}
+		}
 	}
 	&__submit {
 		display: block;
@@ -225,6 +263,13 @@
 			flex: 1 1 auto;
 			&._input {
 				flex: 1 1 auto;
+			}
+		}
+	}
+	.popup-slider {
+		&__item.feedbacks-item {
+			.feedbacks-item__author {
+				margin-top: 30px;
 			}
 		}
 	}

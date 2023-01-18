@@ -21,10 +21,151 @@
               button.btn.form__submit Отправить
 
 
+.popup#addPostPopup
+  .popup__content
+    .popup__body
+      button.popup__close
+      h2.popup__title Добавить квест
+      p.popup__text Вы можете добавить свой квест на сайт абсолютно бесплатно
+      .popup__form.form
+        form(action="#")
+          .form__content
+            .form__item._input
+              input(type="text" name="user-name" placeholder="Имя*" required)
+            .form__item._input
+              input(type="tel" name="user-tel" placeholder="+7 (999) 999-99-99*" required)
+            .form__item._input
+              input(type="text" name="company-name" placeholder="Название компании")
+            .form__item._input
+              input(type="text" name="company-link" placeholder="Ссылка на квест")
+            .form__footer
+              .form-checkbox
+                input#policy_1(type="checkbox" name="user-policy")
+                label(for="policy_1")
+                  span Даю согласие на обработку <a href="#">персональных данных</a>
+              button.btn.form__submit Отправить
+
+.popup#bookingGamePopup
+  .popup__content
+    .popup__body
+      button.popup__close
+      h2.popup__title Бронировать игру
+      p.popup__text Оставьте свои контактные данные, мы перезвоним в течение 30 минут
+      .popup__form.form
+        form(action="#")
+          .form__content
+            .form__item._input._max
+              input(type="text" name="user-name" placeholder="Имя*" required)
+            .form__item._input._max
+              input(type="tel" name="user-tel" placeholder="+7 (999) 999-99-99*" required)
+            .form__item._input._max
+              input(type="datetime-local" name="user-date" placeholder="17.12.2022 15:30")
+            .form__footer._center
+              .form-checkbox
+                input#policy_2(type="checkbox" name="user-policy")
+                label(for="policy_2")
+                  span Даю согласие на обработку <a href="#">персональных данных</a>
+              button.btn.form__submit Отправить
+
+.popup.show#feedbacksPopup
+  .popup__content
+    .popup__body
+      button.popup__close
+      .popup-slider#popup-slider
+        .swiper-wrapper
+          .swiper-slide(data-hash="slide1")
+            .feedbacks-item.popup-slider__item
+              .feedbacks-item__header
+                .feedbacks-item__title
+                  p Квест:
+                  h4 В Темноте
+                .feedbacks-item__raiting
+                  span Рейтинг
+                  p 9,9 из 10
+              .feedbacks-item__content
+                .feedbacks-item__text
+                  p Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте
+                  p Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте
+              .feedbacks-item__author
+                .feedbacks-item__photo
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+                    <path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+                    </svg>
+                .feedbacks-item__label
+                  h4 Вероника П. (гуру)
+                  p 29 дней назад
+          .swiper-slide(data-hash="slide2")
+            .feedbacks-item.popup-slider__item
+              .feedbacks-item__header
+                .feedbacks-item__title
+                  p Квест:
+                  h4 В Темноте
+                .feedbacks-item__raiting
+                  span Рейтинг
+                  p 9,9 из 10
+              .feedbacks-item__content
+                .feedbacks-item__text
+                  p Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте
+              .feedbacks-item__author
+                .feedbacks-item__photo
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+                    <path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+                    </svg>
+                .feedbacks-item__label
+                  h4 Вероника П. (гуру)
+                  p 29 дней назад
+          .swiper-slide(data-hash="slide3")
+            .feedbacks-item.popup-slider__item
+              .feedbacks-item__header
+                .feedbacks-item__title
+                  p Квест:
+                  h4 В Темноте
+                .feedbacks-item__raiting
+                  span Рейтинг
+                  p 9,9 из 10
+              .feedbacks-item__content
+                .feedbacks-item__text
+                  p Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте
+              .feedbacks-item__author
+                .feedbacks-item__photo
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+                    <path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+                    </svg>
+                .feedbacks-item__label
+                  h4 Вероника П. (гуру)
+                  p 29 дней назад
+          .swiper-slide(data-hash="slide4")
+            .feedbacks-item.popup-slider__item
+              .feedbacks-item__header
+                .feedbacks-item__title
+                  p Квест:
+                  h4 В Темноте
+                .feedbacks-item__raiting
+                  span Рейтинг
+                  p 9,9 из 10
+              .feedbacks-item__content
+                .feedbacks-item__text
+                  p Квест отличный, необычный, интересный, все очень понравилось и коллектив и сама игра. В полной темноте, конечно очень сложно функционировать, но нашей команде удалось и что самое необычное что при свете все совсем по другому, игра разума решение необычных задач. Очень, понравилось, спасибо огромное, особенно ведущей. Мы обязательно придем на идеальное свидание В Темноте
+              .feedbacks-item__author
+                .feedbacks-item__photo
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="25" cy="16.9998" rx="5.33333" ry="5.33333" />
+                    <path d="M35.6666 32.3335C35.6666 35.6472 35.6666 38.3335 25 38.3335C14.3333 38.3335 14.3333 35.6472 14.3333 32.3335C14.3333 29.0198 19.1089 26.3335 25 26.3335C30.891 26.3335 35.6666 29.0198 35.6666 32.3335Z"/>
+                    </svg>
+                .feedbacks-item__label
+                  h4 Вероника П. (гуру)
+                  p 29 дней назад
+        .slider-scrollbar._fedbacks-popup-scrollbar
+
+
 .popup#successForm
   .popup__content
     .popup__body
       button.popup__close
       h2.popup__title Брагодарим за заявку!
       p.popup__text В ближайшее время наш менеджер свяжется с вами для подтвеждения брони
-      button.btn Закрыть окно
+      .form__footer._center
+        button.btn.popup-close Закрыть окно

@@ -635,7 +635,7 @@ $(document).ready(() => {
 
   // ======== Всплывающее окно по data-popup ===============
   //? Пример Кнопки: <button data-popup="#mainForm">...</button>
-  $('[data-popup]').on('click', function (e) {
+  $('button[data-popup]').on('click', function (e) {
     $('.popup').removeClass('show');
     let popupId = $(this).attr('data-popup');
     if ($(this).is('[data-theme]')) {
@@ -648,6 +648,13 @@ $(document).ready(() => {
     $(popupId).addClass('show');
     $('html').addClass('lock');
 
+  });
+  $('a[data-popup-id]').click(function () {
+    var namePopup = $(this).attr('data-popup-id');
+    if ($('.popup').is(namePopup)) {
+      $(namePopup).addClass('show');
+      $('body').addClass('lock');
+    }
   });
   // Закрываем окно при нажатии на кнопку
   $('.popup__close, .popup-close').on('click', function () {
@@ -746,6 +753,7 @@ if (document.querySelector(".feedbacks-slider")) {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 1000,
+
     breakpoints: {
       619: {
         slidesPerView: 2,
@@ -879,6 +887,29 @@ if (document.querySelector("#similar_slider")) {
     navigation: {
       nextEl: '.similar__btn--next',
       prevEl: '.similar__btn--prev',
+    },
+  });
+}
+// Slider. Articles:
+if (document.querySelector("#popup-slider")) {
+  new Swiper("#popup-slider", {
+    observer: true,
+    observeParents: true,
+    watchOverflow: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 1000,
+    hashNavigation: {
+      watchState: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    scrollbar: {
+      el: '._fedbacks-popup-scrollbar',
+      draggable: true,
     },
   });
 }
