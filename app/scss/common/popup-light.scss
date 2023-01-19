@@ -46,3 +46,11 @@
 		}
 	}
 }
+
+.map {
+	&__item {
+		#mapPopup {
+			filter: invert(0) hue-rotate(0deg);
+		}
+	}
+}

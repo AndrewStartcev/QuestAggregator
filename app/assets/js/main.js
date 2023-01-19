@@ -645,6 +645,11 @@ $(document).ready(() => {
     if (popupId == '#video') {
       createLinkVideo($(this).attr('data-link'))
     }
+    if ($(this).is('[data-address]')) {
+      drawYandexMap($(this).attr('data-address'))
+      $("#mapAddressProduct").text($(this).attr('data-address'))
+      $("#mapNameProduct").text($(this).attr('data-product'))
+    }
     $(popupId).addClass('show');
     $('html').addClass('lock');
 
@@ -1025,4 +1030,38 @@ function inputFileLoad() {
     }
   }
   document.getElementById("myPhotoCommentInfo").innerHTML = txt;
+}
+
+
+/*==========================================================================================================================================================================*/
+/* Yandex Карта */
+function drawYandexMap(address) {
+
+  let yandexMap = new ymaps.Map("mapPopup", {
+    zoom: 17,
+    center: []
+  });
+
+  if (address) {
+    ymaps.geocode(address, { results: 1 })
+      .then(res => {
+        const geoObject = res.geoObjects.get(0);
+        const longitude = geoObject.geometry.getCoordinates()[0];
+        const latitude = geoObject.geometry.getCoordinates()[1];
+
+        // Сентрируем карту
+        yandexMap.setCenter([longitude, latitude])
+
+        // Добавляем метку на карту
+        yandexMap.geoObjects
+          .add(new ymaps.Placemark([longitude, latitude], {
+            balloonContent: address
+          }, {
+            preset: 'islands#redGlyphIcon',
+            iconGlyphColor: 'red'
+          }))
+
+      });
+  };
+
 }
