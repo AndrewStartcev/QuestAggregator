@@ -998,3 +998,31 @@ function clearScheme() {
 
 setupSwitcher();
 setupScheme();
+
+const fileInput = document.getElementById('myPhotoComment');
+fileInput.addEventListener("change", inputFileLoad);
+
+function inputFileLoad() {
+  var txt = "";
+  if ('files' in fileInput) {
+    if (fileInput.files.length == 0) {
+      txt = " Файл не выбран";
+    } else {
+      for (var i = 0; i < fileInput.files.length; i++) {
+        const file = fileInput.files[i];
+
+        if ('name' in file) {
+          txt += file.name + "";
+        }
+      }
+    }
+  }
+  else {
+    if (x.value == "") {
+      txt += " Файл не выбран";
+    } else {
+      txt += "Свойство files не поддерживается вашим браузером!";
+    }
+  }
+  document.getElementById("myPhotoCommentInfo").innerHTML = txt;
+}

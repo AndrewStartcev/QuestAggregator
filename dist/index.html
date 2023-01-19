@@ -1522,7 +1522,7 @@
           </div>
         </div>
       </footer>
-      <button class="up-btn" data-goto=".page"></button>
+      <button class="up-btn" data-goto=".page"></button><!-- = Оставить заявку -->
       <div class="popup" id="orderPopup">
         <div class="popup__content">
           <div class="popup__body">
@@ -1553,7 +1553,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- = Добавить свой квест -->
       <div class="popup" id="addPostPopup">
         <div class="popup__content">
           <div class="popup__body">
@@ -1587,7 +1587,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- = Забронировать игру -->
       <div class="popup" id="bookingGamePopup">
         <div class="popup__content">
           <div class="popup__body">
@@ -1618,8 +1618,73 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="popup show" id="feedbacksPopup">
+      </div><!-- = Добавить отзыв -->
+      <div class="popup" id="bookingGamePopup">
+        <div class="popup__content">
+          <div class="popup__body">
+            <button class="popup__close"></button>
+            <h2 class="popup__title">Добавить отзыв</h2>
+            <div class="popup__form form form--min">
+              <form action="#">
+                <div class="form__content _gap-big">
+                  <div class="form__item _max">
+                    <label class="form__label" for="">Оценка</label>
+                    <div class="rating__group">
+                      <input class="rating__input" type="radio" name="health" id="health-1" value="1" checked="checked"/>
+                      <label class="rating__star" for="health-1" aria-label="Ужасно"></label>
+                      <input class="rating__input" type="radio" name="health" id="health-2" value="2"/>
+                      <label class="rating__star" for="health-2" aria-label="Сносно"></label>
+                      <input class="rating__input" type="radio" name="health" id="health-3" value="3"/>
+                      <label class="rating__star" for="health-3" aria-label="Нормально"></label>
+                      <input class="rating__input" type="radio" name="health" id="health-4" value="4"/>
+                      <label class="rating__star" for="health-4" aria-label="Хорошо"></label>
+                      <input class="rating__input" type="radio" name="health" id="health-5" value="5"/>
+                      <label class="rating__star" for="health-5" aria-label="Отлично"></label>
+                      <div class="rating__focus"></div>
+                    </div>
+                  </div>
+                  <div class="form__item _textarea">
+                    <label class="form__label" for="">Описание отзыва</label>
+                    <textarea name="user-detalis" placeholder="Введите текст"></textarea>
+                  </div>
+                  <div class="form__item _input _max">
+                    <label class="form__label" for="">Как вас зовут</label>
+                    <input type="text" name="user-name" placeholder="Имя*" required="required"/>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label" for="">Ваше фото</label>
+                    <div class="form-file">
+                      <input id="myPhotoComment" type="file" name="user-photo" accept="image/*"/>
+                      <label class="form-file__btn" for="myPhotoComment">Выберите файл</label><span id="myPhotoCommentInfo">Файл не выбран</span>
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label" for="">Кто вы</label>
+                    <div class="form-radio">
+                      <div class="form-radio__item">
+                        <input id="Gure" type="radio" name="user-status"/>
+                        <label for="Gure"><span>Гуру</span></label>
+                      </div>
+                      <div class="form-radio__item">
+                        <input id="news" type="radio" name="user-status" checked="checked"/>
+                        <label for="news"><span>Новичок</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__footer">
+                    <div class="form-checkbox">
+                      <input id="policy_4" type="checkbox" name="user-policy"/>
+                      <label for="policy_4"><span>Даю согласие на обработку <a href="#">персональных данных</a></span></label>
+                    </div>
+                    <button class="btn form__submit">Отправить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!-- = Посмотреть отзыв -->
+      <div class="popup" id="feedbacksPopup">
         <div class="popup__content">
           <div class="popup__body">
             <button class="popup__close"></button>
@@ -1747,7 +1812,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- = Окно успешной отправки формы -->
       <div class="popup" id="successForm">
         <div class="popup__content">
           <div class="popup__body">

@@ -1,3 +1,4 @@
+<!-- = Оставить заявку -->
 .popup#orderPopup
   .popup__content
     .popup__body
@@ -20,7 +21,7 @@
                   span Даю согласие на обработку <a href="#">персональных данных</a>
               button.btn.form__submit Отправить
 
-
+<!-- = Добавить свой квест -->
 .popup#addPostPopup
   .popup__content
     .popup__body
@@ -45,6 +46,7 @@
                   span Даю согласие на обработку <a href="#">персональных данных</a>
               button.btn.form__submit Отправить
 
+<!-- = Забронировать игру -->
 .popup#bookingGamePopup
   .popup__content
     .popup__body
@@ -67,7 +69,65 @@
                   span Даю согласие на обработку <a href="#">персональных данных</a>
               button.btn.form__submit Отправить
 
-.popup.show#feedbacksPopup
+<!-- = Добавить отзыв -->
+.popup#bookingGamePopup
+  .popup__content
+    .popup__body
+      button.popup__close
+      h2.popup__title Добавить отзыв
+      .popup__form.form.form--min
+        form(action="#")
+          .form__content._gap-big
+            .form__item._max
+              label.form__label(for="") Оценка
+              .rating__group
+                  input.rating__input(type="radio" name="health" id="health-1" value="1" checked)
+                  label.rating__star(for="health-1" aria-label="Ужасно")
+
+                  input.rating__input(type="radio" name="health" id="health-2" value="2")
+                  label.rating__star(for="health-2" aria-label="Сносно")
+
+                  input.rating__input(type="radio" name="health" id="health-3" value="3")
+                  label.rating__star(for="health-3" aria-label="Нормально")
+
+                  input.rating__input(type="radio" name="health" id="health-4" value="4")
+                  label.rating__star(for="health-4" aria-label="Хорошо")
+
+                  input.rating__input(type="radio" name="health" id="health-5" value="5")
+                  label.rating__star(for="health-5" aria-label="Отлично")
+                  .rating__focus
+            .form__item._textarea
+              label.form__label(for="") Описание отзыва
+              textarea(name="user-detalis" placeholder="Введите текст")
+            .form__item._input._max
+              label.form__label(for="") Как вас зовут
+              input(type="text" name="user-name" placeholder="Имя*" required)
+            .form__item
+              label.form__label(for="") Ваше фото
+              .form-file
+                input#myPhotoComment(type="file", name="user-photo"  accept="image/*")
+                label.form-file__btn(for="myPhotoComment") Выберите файл
+                span#myPhotoCommentInfo Файл не выбран
+            .form__item
+                label.form__label(for="") Кто вы
+                .form-radio
+                  .form-radio__item
+                    input#Gure(type="radio" name="user-status")
+                    label(for="Gure")
+                      span Гуру
+                  .form-radio__item
+                    input#news(type="radio" name="user-status" checked)
+                    label(for="news")
+                      span Новичок
+            .form__footer
+              .form-checkbox
+                input#policy_4(type="checkbox" name="user-policy")
+                label(for="policy_4")
+                  span Даю согласие на обработку <a href="#">персональных данных</a>
+              button.btn.form__submit Отправить
+
+<!-- = Посмотреть отзыв -->
+.popup#feedbacksPopup
   .popup__content
     .popup__body
       button.popup__close
@@ -160,7 +220,7 @@
                   p 29 дней назад
         .slider-scrollbar._fedbacks-popup-scrollbar
 
-
+<!-- = Окно успешной отправки формы -->
 .popup#successForm
   .popup__content
     .popup__body
