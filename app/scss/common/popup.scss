@@ -474,6 +474,15 @@
 			}
 		}
 	}
+	.map {
+		&__item {
+			padding-bottom: 86.333%;
+		}
+		&__footer {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+	}
 }
 
 @include media-mobile {
