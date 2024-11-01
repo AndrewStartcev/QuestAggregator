@@ -5,3 +5,4 @@ https://andrewstartcev.github.io/QuestAggregator/
 2. [Квест](https://andrewstartcev.github.io/QuestAggregator/dist/product.html)
 3. [Новости](https://andrewstartcev.github.io/QuestAggregator/dist/news.html)
 4. [Статья](https://andrewstartcev.github.io/QuestAggregator/dist/news-post.html)
+5. [404](https://andrewstartcev.github.io/QuestAggregator/dist/404.html)
